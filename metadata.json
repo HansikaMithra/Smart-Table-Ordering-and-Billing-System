@@ -1,0 +1,7 @@
+{
+  "name": "DineSmart - AI Restaurant Tablet",
+  "description": "A sophisticated tablet interface for restaurant tables featuring categorized menus, real-time billing, and integrated payment with AI-powered food descriptions.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
