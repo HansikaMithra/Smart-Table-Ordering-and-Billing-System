@@ -76,10 +76,11 @@ const App: React.FC = () => {
             <div className="w-40 h-40 bg-green-500 rounded-[3rem] flex items-center justify-center text-white mb-10 shadow-2xl shadow-green-100 animate-bounce">
               <i className="fa-solid fa-check text-7xl"></i>
             </div>
-            <h2 className="text-5xl font-black text-gray-900 mb-6 tracking-tighter">Thank You</h2>
+            <h2 className="text-5xl font-black text-gray-900 mb-6 tracking-tighter">Session Complete</h2>
             <p className="text-2xl text-gray-400 text-center max-w-lg leading-relaxed font-medium">
-              Payment processed successfully. We hope to see you again soon!
+                Thank you! The session has ended. Ready for the next guest.
             </p>
+
             <div className="mt-16 text-gray-300 font-bold uppercase tracking-[0.3em] text-sm animate-pulse">
               Resetting for next guest...
             </div>
@@ -93,14 +94,14 @@ const App: React.FC = () => {
 
   return (
     <div className="w-full h-full flex flex-col overflow-hidden select-none">
-      {/* OS Status Bar */}
       <div className={`w-full h-10 px-8 flex justify-between items-center z-[100] transition-colors duration-500 ${appState === AppState.WELCOME ? 'bg-transparent' : 'bg-white border-b border-gray-100'}`}>
         <div className="flex items-center space-x-4">
             <span className="text-sm font-black text-gray-900">{currentTime}</span>
             <div className="flex items-center space-x-2 text-green-500">
-                <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="text-[10px] font-black uppercase tracking-widest opacity-60">Live • T14</span>
+                 <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></div>
+                 <span className="text-[10px] font-black uppercase tracking-widest opacity-60">Active</span>
             </div>
+
         </div>
         
         <div className="flex items-center space-x-6">
@@ -111,8 +112,10 @@ const App: React.FC = () => {
             >
               <i className={`fa-solid ${waiterCalled ? 'fa-check' : 'fa-bell-concierge'} text-[10px]`}></i>
               <span className="text-[9px] font-black uppercase tracking-widest">
-                  {waiterCalled ? 'Notified' : 'Service'}
+                    {waiterCalled ? 'Done' : 'Call'}
               </span>
+
+              
             </button>
           )}
           <div className="flex items-center space-x-3 text-gray-400">
